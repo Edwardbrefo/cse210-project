@@ -48,7 +48,8 @@ public class Journal
     // Add a new entry with today’s date
     public void AddEntry(string answer)
     {
-        _date = DateTime.Now.ToString("yyyy-MM-dd"); // Set the date to today's date
+        DateTime date = DateTime.Now; // Set the date to today's date
+        _date = date.ToShortDateString(); // Store the date as a string
         _answers.Add(answer);
     }
 }
